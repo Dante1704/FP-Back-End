@@ -3,7 +3,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const { PGUSER , PGPASSWORD, PGHOST, PGDATABASE } = process.env;
+const { PGUSER , PGPASSWORD, PGHOST, PGDATABASE, PGPORT } = process.env;
 
 const sequelize = new Sequelize(
   `postgresql://${{ PGUSER }}:${{ PGPASSWORD }}@${{ PGHOST }}:${{ PGPORT }}/${{ PGDATABASE }}`,
