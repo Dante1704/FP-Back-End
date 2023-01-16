@@ -31,7 +31,7 @@ module.exports.sendConfirmationEmail = (name, email, confirmationCode) => {
           <h1>Email Confirmation</h1>
           <h2>Hello ${name}</h2>
           <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
-          <a href=http://localhost:3000/confirm/${confirmationCode}> Click here</a>
+          <a href=http://http://159.223.195.60:3000/confirm/${confirmationCode}>Click here</a>
           <p>TIENDA NUESTRA.</p>
         </div>
       </body>    
@@ -77,17 +77,3 @@ module.exports.sendUserBannedEmail = (name, lastName, email) => {
     .catch((err) => console.log(err));
 };
 
-{
-  /* <p>Products</p>
-<p>${newOrder.products}</p> */
-}
-
-{
-  /* <div>
-      <h1>Email Confirmation</h1>
-          <h2>Hello ${name}</h2>
-          <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
-          <a href=http://localhost:3000/confirm/${confirmationCode}> Click here</a>
-          <p>TIENDA NUESTRA.</p>
-</div> */
-}
