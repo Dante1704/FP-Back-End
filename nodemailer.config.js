@@ -31,7 +31,7 @@ module.exports.sendConfirmationEmail = (name, email, confirmationCode) => {
           <h1>Email Confirmation</h1>
           <h2>Hello ${name}</h2>
           <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
-          <a href=http://159.223.195.60:3000/confirm/${confirmationCode}>Click here</a>
+          <a href=http://https://tiendanuestra-pfx5r.ondigitalocean.app/confirm/${confirmationCode}>Click here</a>
           <p>TIENDA NUESTRA.</p>
         </div>
       </body>    
