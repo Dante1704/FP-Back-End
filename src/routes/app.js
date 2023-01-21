@@ -4,14 +4,14 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
-const productRoutes = require("./routes/product");
-const userRoutes = require("./routes/user");
-const logInRoutes = require("./routes/logIn");
-const orderRoutes = require("./routes/order");
-const checkoutRoutes = require("./routes/payments.js");
-const authRoutes = require("./routes/auth");
-const cartRoutes = require("./routes/cart");
-const reviewRoutes = require("./routes/review");
+const productRoutes = require("./product");
+const userRoutes = require("./user");
+const logInRoutes = require("./logIn");
+const orderRoutes = require("./order");
+const checkoutRoutes = require("./payments.js");
+const authRoutes = require("./auth");
+const cartRoutes = require("./cart");
+const reviewRoutes = require("./review");
 
 const server = express();
 
