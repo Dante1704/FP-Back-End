@@ -1,5 +1,5 @@
 //api entry
-const server = require("./app");
+const server = require("./src/routes/app");
 const { conn } = require("./src/db");
 const PORT = process.env.PORT || 3001;
 
