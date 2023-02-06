@@ -8,7 +8,5 @@ const { conn } = require("./src/db");
 const PORT = process.env.port || 3001;
 
 conn.sync({ force: true }).then(() => {
-  server.listen(PORT, () => {
-    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
-  });
+  server.listen(PORT);
 });
