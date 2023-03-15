@@ -1,5 +1,5 @@
 //api entry
-const server = require("./src/routes/app");
+const server = require("./src/app");
 const { conn } = require("./src/db");
 
 
