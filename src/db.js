@@ -8,13 +8,28 @@ const { username , password, host, database, port, sslmode} = process.env;
 //const DATABASE_URL = process.env.DATABASE_URL;
 //DATABASE_URL
 
-const sequelize = new Sequelize(
+/* const sequelize = new Sequelize(
   `postgresql://${username}:${password}@${host}:${port}/${database}?${sslmode}`,
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   }
-);
+); */
+
+const sequelize = new Sequelize({
+  database: `${database}`,
+  username: `${username}`,
+  password: `${password}`,
+  host: `${host}`,
+  port: `${port}`,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true, // This will help you. But you will see nwe error
+      rejectUnauthorized: false // This line will fix new error
+    }
+  },
+});
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
