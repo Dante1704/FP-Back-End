@@ -1,15 +1,15 @@
 //postgres db
 require("dotenv").config();
-const pg = require("pg");
+const pg = require("pg"); //tuve que importar pg por que vercel no lo leia directamente del package
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 /* const { username , password, host, database, port, sslmode} = process.env; */
 //postgresql://${username}:${password}@${host}:${port}/${database}?${sslmode}
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.DATABASE_URL; // db en railway
 
 const sequelize = new Sequelize(`${DATABASE_URL}`,{
-  dialectModule: pg
+  dialectModule: pg //tuve que indicarle esto para que funcione en vercel
 });
 /*   {
     logging: false, // set to console.log to see the raw SQL queries
